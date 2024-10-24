@@ -1,0 +1,58 @@
+1. find /var/log -name "*.log" -mtime +15 -size -500M
+ 
+ 
+2. find /path/to/directory -type l -exec rm {} +
+ 
+ 
+3. find /home/user ! -user $(whoami)
+ 
+ 
+4. find /etc -type f -name "*config*" -perm -002
+ 
+ 
+5. grep -v "bash" /etc/passwd
+ 
+ 
+6. grep -rl --exclude-binary "your_string" /path/to/directory
+ 
+ 
+7. grep -C 3 "error" filename
+ 
+ 
+8. grep "^root" /etc/passwd
+ 
+ 
+9. tar --exclude='*.mp4' -czvf user_archive.tar.gz -C /home user
+ 
+ 
+10. tar -xzvf archive.tar.gz file.txt
+ 
+ 
+11. Extract, append, and compress the archive using tar.
+ 
+ 
+12. tar -tzvf archive.tar.gz
+ 
+ 
+13. ps aux | grep "java" | awk '{print $2, $11}'
+ 
+ 
+14. ls /var/log | grep "error"
+ 
+ 
+15. grep -c "failed" filename or grep "failed" filename | wc -l
+ 
+ 
+16. tail -n 20 logfile | grep "critical"
+ 
+ 
+17. du -h /home/user | sort -hr
+ 
+ 
+18. du -sh /var --exclude=/var/log
+ 
+ 
+19. find /path/to/directory -type f -size +100M -exec du -h {} +
+ 
+ 
+20. du -h --max-depth=1 /usr | sort -hr | head -n 10
