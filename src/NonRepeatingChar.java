@@ -10,7 +10,7 @@ public class NonRepeatingChar {
 
     public static char findNonRepFirstChar(String str){
 
-        HashMap<Character, Integer> hasMap = new HashMap<>();
+       HashMap<Character, Integer> hasMap = new HashMap<>();
         for(int i=0;i<str.length();i++){
             char c = str.charAt(i);
             hasMap.put(c,hasMap.getOrDefault(c,0)+1);
