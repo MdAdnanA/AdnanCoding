@@ -1,0 +1,48 @@
+PROJECT:
+
+ONLINE BUS BOOKING SYSTEM:-
+
+Domain Over view:
+
+	Online Bus Booking Portal facilitates the Booking and management of travel service of busses through a web or mobile-based platform.
+It serves as an intermediary between transport service providers and passengers.Offering a convenient way to reserve a travelling ticket, 
+making payments and manage bookings for bus.
+
+Portal Features:-
+
+1. User Registration/Login:
+	Allows users to create account.Alos helps in managing accounts, tracks there bookings, and set preferences
+2. Real-time Availability:
+	The system provides real-time updates on avaibility of seats and vehical for specific root/distination.
+3. Payments:
+	Integration with secure payment gateways to facilitate payments through multiple channels
+4. Fare Comparision:
+	Comparision of prices based on different operators, providers and transit points in one interface.
+5. Customer Support:
+	Online/Offline support for booking issues, inquiries.
+6. Notifications:
+	Alerts sent via Email, SMS or in-app.Notifications related to booking confirmations, cancellations, delays, etc.
+7. Rating and Reviews:
+	Allows users to review and rate services they've used, influencingfuture bookings.
+
+Business Model:
+
+1. Commission-Based:
+	The platform charges transport providers a commission for each booking made through a portal.
+2. Subscription:
+	Transport providers or customers can upgrade for premium features.
+3. Advertisment:
+	By promoting Ads for travel related services revinue is generated.
+
+Challenges:-
+
+1. Real-Time Updates
+	Ensuring that seats/service availability is accurate and updated in real-time.
+2. Search Optimization
+	Building a search engine that quickly filter buses based on route, price, Comfort.
+3. Managing Discounts:
+	In creating discount management for Offers, booking points without interrupting booking process.
+4. Calculation:
+	Calculation of fare for different routes,transit points based on user input.
+
+
