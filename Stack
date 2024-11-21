@@ -1,0 +1,45 @@
+class Solution {
+  public static void main(String[] args) {
+    // String str = "(a+(b-c)+z)-z)"; //invalid
+ 
+    // String str1 = "(a + (b -c) +z) - z)"; // extra closing
+    // String str2 = "(a + (b -c) +z - z)"; // valid
+    // String str3 = "((a + (b -c) +z - z)"; // extra opening
+    // String str4 = "(a + {b -c)  +z}"; // bracket types do not match/ brackets overlapping
+    // String str5 = "y + (a + (b -c) +z - z)"; // valid
+ 
+    // System.out.println(checkValidOrNot(str2));
+ 
+    int[] arr = {4,3,2,1};
+    int[] arr1 = {4,7,2,3,1};
+ 
+    List<Integer> res = oceanVisible(arr1);
+ 
+    res.stream().forEach(e -> System.out.println(e));
+  }
+ 
+  private static List<Integer> oceanVisible(int[] arr){
+    int max = Integer.MIN_VALUE;
+    List<Integer> res = new ArrayList<>();
+    for(int i = arr.length-1; i>=0; i--){
+      if(arr[i]>max){
+        max = arr[i];
+        res.add(arr[i]);
+      }
+    }
+    return res;
+  }
+ 
+  private static boolean checkValidOrNot(String str){
+    Stack<Character> ch = new Stack<Character>();
+    for(char c : str.toCharArray()){
+      if(!ch.isEmpty() && ((c==']' && ch.peek()=='[') || (c=='}' && ch.peek()=='{') || (c==')' && ch.peek()=='(')))
+        ch.pop();
+      else if(c==']' || c=='}' || c==')')
+        return false;
+      else if(c=='[' || c=='{' || c=='(')
+        ch.push(c);
+    }
+    return ch.isEmpty();
+  }
+}
