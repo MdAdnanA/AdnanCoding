@@ -1,0 +1,201 @@
+Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 5.15.167.4-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Dec 19 05:48:48 UTC 2024
+
+  System load:  0.0                 Processes:             63
+  Usage of /:   0.2% of 1006.85GB   Users logged in:       0
+  Memory usage: 5%                  IPv4 address for eth0: 172.31.79.154
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+This message is shown once a day. To disable it please create the
+/home/adnan/.hushlogin file.
+adnan@ICPL35327:~$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  21516 12920 ?        Ss   05:48   0:00 /sbin/init
+root           2  0.0  0.0   2616  1440 ?        Sl   05:48   0:00 /init
+root           6  0.0  0.0   2616   132 ?        Sl   05:48   0:00 plan9 --control-
+root          51  0.0  0.2  50424 15988 ?        S<s  05:48   0:00 /usr/lib/systemd
+root          93  0.0  0.0  24388  6672 ?        Ss   05:48   0:00 /usr/lib/systemd
+systemd+     148  0.0  0.1  21452 11900 ?        Ss   05:48   0:00 /usr/lib/systemd
+systemd+     149  0.0  0.0  91020  6540 ?        Ssl  05:48   0:00 /usr/lib/systemd
+root         158  0.0  0.0   4236  2684 ?        Ss   05:48   0:00 /usr/sbin/cron -
+message+     159  0.0  0.0   9620  5384 ?        Ss   05:48   0:00 @dbus-daemon --s
+root         171  0.0  0.1  17976  8204 ?        Ss   05:48   0:00 /usr/lib/systemd
+root         176  0.0  0.1 1756096 13976 ?       Ssl  05:48   0:00 /usr/libexec/wsl
+root         188  0.0  0.0   3160  1188 hvc0     Ss+  05:48   0:00 /sbin/agetty -o
+syslog       196  0.0  0.0 222508  5376 ?        Ssl  05:48   0:00 /usr/sbin/rsyslo
+root         202  0.0  0.0   3116  1232 tty1     Ss+  05:48   0:00 /sbin/agetty -o
+root         208  0.0  0.2 107008 22500 ?        Ssl  05:48   0:00 /usr/bin/python3
+root         305  0.0  0.0   2620   120 ?        Ss   05:48   0:00 /init
+root         306  0.0  0.0   2620   124 ?        S    05:48   0:00 /init
+adnan        307  0.0  0.0   6072  5416 pts/0    Ss   05:48   0:00 -bash
+root         308  0.0  0.0   6692  4496 pts/1    Ss   05:48   0:00 /bin/login -f
+adnan        396  0.0  0.1  20252 11616 ?        Ss   05:48   0:00 /usr/lib/systemd
+adnan        397  0.0  0.0  21148  1728 ?        S    05:48   0:00 (sd-pam)
+adnan        408  0.0  0.0   6072  5228 pts/1    S+   05:48   0:00 -bash
+adnan        446  0.0  0.0   8280  4144 pts/0    R+   05:54   0:00 ps aux
+adnan@ICPL35327:~$ ps -e
+    PID TTY          TIME CMD
+      1 ?        00:00:00 systemd
+      2 ?        00:00:00 init-systemd(Ub
+      6 ?        00:00:00 init
+     51 ?        00:00:00 systemd-journal
+     93 ?        00:00:00 systemd-udevd
+    148 ?        00:00:00 systemd-resolve
+    149 ?        00:00:00 systemd-timesyn
+    158 ?        00:00:00 cron
+    159 ?        00:00:00 dbus-daemon
+    171 ?        00:00:00 systemd-logind
+    176 ?        00:00:00 wsl-pro-service
+    188 hvc0     00:00:00 agetty
+    196 ?        00:00:00 rsyslogd
+    202 tty1     00:00:00 agetty
+    208 ?        00:00:00 unattended-upgr
+    305 ?        00:00:00 SessionLeader
+    306 ?        00:00:00 Relay(307)
+    307 pts/0    00:00:00 bash
+    308 pts/1    00:00:00 login
+    396 ?        00:00:00 systemd
+    397 ?        00:00:00 (sd-pam)
+    408 pts/1    00:00:00 bash
+    484 pts/0    00:00:00 ps
+adnan@ICPL35327:~$ ps -f
+UID          PID    PPID  C STIME TTY          TIME CMD
+adnan        307     306  0 05:48 pts/0    00:00:00 -bash
+adnan        485     307  0 05:56 pts/0    00:00:00 ps -f
+adnan@ICPL35327:~$ ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 05:48 ?        00:00:00 /sbin/init
+root           2       1  0 05:48 ?        00:00:00 /init
+root           6       2  0 05:48 ?        00:00:00 plan9 --control-socket 6 --log-
+root          51       1  0 05:48 ?        00:00:00 /usr/lib/systemd/systemd-journa
+root          93       1  0 05:48 ?        00:00:00 /usr/lib/systemd/systemd-udevd
+systemd+     148       1  0 05:48 ?        00:00:00 /usr/lib/systemd/systemd-resolv
+systemd+     149       1  0 05:48 ?        00:00:00 /usr/lib/systemd/systemd-timesy
+root         158       1  0 05:48 ?        00:00:00 /usr/sbin/cron -f -P
+message+     159       1  0 05:48 ?        00:00:00 @dbus-daemon --system --address
+root         171       1  0 05:48 ?        00:00:00 /usr/lib/systemd/systemd-logind
+root         176       1  0 05:48 ?        00:00:00 /usr/libexec/wsl-pro-service -v
+root         188       1  0 05:48 hvc0     00:00:00 /sbin/agetty -o -p -- \u --nocl
+syslog       196       1  0 05:48 ?        00:00:00 /usr/sbin/rsyslogd -n -iNONE
+root         202       1  0 05:48 tty1     00:00:00 /sbin/agetty -o -p -- \u --nocl
+root         208       1  0 05:48 ?        00:00:00 /usr/bin/python3 /usr/share/una
+root         305       2  0 05:48 ?        00:00:00 /init
+root         306     305  0 05:48 ?        00:00:00 /init
+adnan        307     306  0 05:48 pts/0    00:00:00 -bash
+root         308       2  0 05:48 pts/1    00:00:00 /bin/login -f
+adnan        396       1  0 05:48 ?        00:00:00 /usr/lib/systemd/systemd --user
+adnan        397     396  0 05:48 ?        00:00:00 (sd-pam)
+adnan        408     308  0 05:48 pts/1    00:00:00 -bash
+adnan        492     307  0 05:58 pts/0    00:00:00 ps -ef
+adnan@ICPL35327:~$ ps aux | grep nginx
+adnan        931  0.0  0.0   4088  1928 pts/0    S+   06:03   0:00 grep --color=auto nginx
+adnan@ICPL35327:~$ ps --forest
+    PID TTY          TIME CMD
+    307 pts/0    00:00:00 bash
+    944 pts/0    00:00:00  \_ ps
+adnan@ICPL35327:~$ ps -ef --forest
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 05:48 ?        00:00:00 /sbin/init
+root           2       1  0 05:48 ?        00:00:00 /init
+root           6       2  0 05:48 ?        00:00:00  \_ plan9 --control-socket 6 --
+root         305       2  0 05:48 ?        00:00:00  \_ /init
+root         306     305  0 05:48 ?        00:00:00  |   \_ /init
+adnan        307     306  0 05:48 pts/0    00:00:00  |       \_ -bash
+adnan        947     307  0 06:05 pts/0    00:00:00  |           \_ ps -ef --forest
+root         308       2  0 05:48 pts/1    00:00:00  \_ /bin/login -f
+adnan        408     308  0 05:48 pts/1    00:00:00      \_ -bash
+root          51       1  0 05:48 ?        00:00:00 /usr/lib/systemd/systemd-journa
+root          93       1  0 05:48 ?        00:00:00 /usr/lib/systemd/systemd-udevd
+systemd+     148       1  0 05:48 ?        00:00:00 /usr/lib/systemd/systemd-resolv
+systemd+     149       1  0 05:48 ?        00:00:00 /usr/lib/systemd/systemd-timesy
+root         158       1  0 05:48 ?        00:00:00 /usr/sbin/cron -f -P
+message+     159       1  0 05:48 ?        00:00:00 @dbus-daemon --system --address
+root         171       1  0 05:48 ?        00:00:00 /usr/lib/systemd/systemd-logind
+root         176       1  0 05:48 ?        00:00:00 /usr/libexec/wsl-pro-service -v
+root         188       1  0 05:48 hvc0     00:00:00 /sbin/agetty -o -p -- \u --nocl
+syslog       196       1  0 05:48 ?        00:00:00 /usr/sbin/rsyslogd -n -iNONE
+root         202       1  0 05:48 tty1     00:00:00 /sbin/agetty -o -p -- \u --nocl
+root         208       1  0 05:48 ?        00:00:00 /usr/bin/python3 /usr/share/una
+adnan        396       1  0 05:48 ?        00:00:00 /usr/lib/systemd/systemd --user
+adnan        397     396  0 05:48 ?        00:00:00  \_ (sd-pam)
+polkitd      780       1  0 05:59 ?        00:00:00 /usr/lib/polkit-1/polkitd --no-
+adnan@ICPL35327:~$ top
+top - 06:25:25 up 37 min,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks:  24 total,   1 running,  23 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :  7.5/7638.0   [|||||                                                   ]
+MiB Swap:  0.0/2048.0   [                                                        ]
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+      1 root      20   0   21676  12932   9620 S   0.0   0.2   0:00.41 systemd
+      2 root      20   0    2616   1440   1320 S   0.0   0.0   0:00.00 init-syste+
+      6 root      20   0    2616    132    132 S   0.0   0.0   0:00.00 init
+     51 root      19  -1   66816  15968  14776 S   0.0   0.2   0:00.19 systemd-jo+
+     93 root      20   0   24388   6672   5024 S   0.0   0.1   0:00.19 systemd-ud+
+    148 systemd+  20   0   21452  11900   9700 S   0.0   0.2   0:00.06 systemd-re+
+    149 systemd+  20   0   91020   6540   5696 S   0.0   0.1   0:00.06 systemd-ti+
+    158 root      20   0    4236   2684   2448 S   0.0   0.0   0:00.00 cron
+    159 message+  20   0    9620   5384   4696 S   0.0   0.1   0:00.09 dbus-daemon
+    171 root      20   0   17976   8204   7184 S   0.0   0.1   0:00.07 systemd-lo+
+    176 root      20   0 1756096  13976   9420 S   0.0   0.2   0:00.10 wsl-pro-se+
+    188 root      20   0    3160   1188   1100 S   0.0   0.0   0:00.00 agetty
+    196 syslog    20   0  222508   5376   4528 S   0.0   0.1   0:00.05 rsyslogd
+    202 root      20   0    3116   1232   1144 S   0.0   0.0   0:00.00 agetty
+    208 root      20   0  107008  22500  13028 S   0.0   0.3   0:00.09 unattended+
+    305 root      20   0    2620    120      0 S   0.0   0.0   0:00.00 SessionLea+
+    306 root      20   0    2620    124      0 S   0.0   0.0   0:00.01 Relay(307)
+    307 adnan     20   0    6072   5432   3700 S   0.0   0.1   0:00.02 bash
+    308 root      20   0    6692   4496   3712 S   0.0   0.1   0:00.00 login
+    396 adnan     20   0   20252  11616   9544 S   0.0   0.1   0:00.05 systemd
+    397 adnan     20   0   21148   1728      0 S   0.0   0.0   0:00.00 (sd-pam)
+    408 adnan     20   0    6072   5228   3588 S   0.0   0.1   0:00.01 bash
+    780 polkitd   20   0  308160   9244   6560 S   0.0   0.1   0:00.05 polkitd
+   1011 adnan     20   0    9296   5192   3040 R   0.0   0.1   0:00.01 top
+
+
+
+
+
+
+
+
+
+
+
+
+adnan@ICPL35327:~$ HTOP
+HTOP: command not found
+adnan@ICPL35327:~$ htop
+Command 'htop' not found, but can be installed with:
+sudo snap install htop  # version 3.3.0, or
+sudo apt  install htop  # version 3.2.2-2
+See 'snap info htop' for additional versions.
+adnan@ICPL35327:~$ sudo apt install htop  # version 3.3.0
+[sudo] password for adnan:
+
+
+Sorry, try again.
+[sudo] password for adnan:
+
+
+Sorry, try again.
+[sudo] password for adnan:
+sudo: 3 incorrect password attempts
+adnan@ICPL35327:~$ load average: 1.02, 0.85, 0.77
+Command 'load' not found, did you mean:
+  command 'xload' from deb x11-apps (7.7+11)
+  command 'tload' from deb procps (2:4.0.4-4ubuntu3.2)
+  command 'olad' from deb ola (0.10.9.nojsmin-4)
+  command 'nload' from deb nload (0.7.4-2build3)
+Try: sudo apt install <deb name>
+adnan@ICPL35327:~$
