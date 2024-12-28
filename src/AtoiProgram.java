@@ -45,3 +45,39 @@ public class AtoiProgram {
 
     }
 }
+
+=============================================
+new and best approch
+=============================================
+
+    import java.util.ArrayList;
+import java.util.HashMap;
+
+class Solution {
+  public static void main(String[] args) {
+    int[] arr = {20,15,30,45,50};
+    int k = 100;
+    System.out.println(findSum(arr, k));
+  }
+
+  public static int findSum(int[] arr, int k){
+   HashMap<Integer,Integer> map = new HashMap<>();
+   int currentSum = 0;
+   int minLength =Integer.MAX_VALUE;
+
+   for(int i =0;i<arr.length;i++){
+    currentSum+=arr[i];
+
+    if(currentSum==k){
+      minLength = Math.min(minLength,i+1);
+    }
+    if(map.containsKey(currentSum-k)){
+      minLength = Math.min(minLength,i- map.get(currentSum-k));
+    }
+    map.putIfAbsent(currentSum,i);
+   }
+   return minLength==Integer.MAX_VALUE? -1: minLength;
+
+  }
+}
+
