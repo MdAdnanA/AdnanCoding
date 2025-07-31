@@ -1,0 +1,50 @@
+/*
+ * Click `Run` to execute the snippet below!
+ */
+
+import java.io.*;
+import java.util.*;
+
+/*
+ * To execute Java, please define "static void main" on a class
+ * named Solution.
+ *
+ * If you need more classes, simply define them inline.
+ */
+
+class Solution {
+  public static void main(String[] args) {
+    String str = "abcd{efg}hijk{lmn}opq";
+    System.out.println(m1(str));
+   
+  }
+
+  public static String m1(String str){
+    StringBuilder sb = new StringBuilder();
+    StringBuilder sb1 = new StringBuilder();
+
+    boolean in = false;
+
+    for(char ch:str.toCharArray()){
+      if(ch=='{'){
+        in=true;
+        sb.append(ch);
+        sb1.setLength(0);
+      }else if(ch=='}'){
+        in = false;
+         sb.append(sb1.reverse().toString()).append(ch);
+      }else if(in){
+        sb1.append(ch);
+       
+    }else{
+      sb.append(ch);
+    }
+    
+  }
+  return sb.toString();
+  }
+
+ 
+    
+}
+
