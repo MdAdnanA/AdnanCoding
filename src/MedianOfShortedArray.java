@@ -47,3 +47,51 @@ public class MedianOfShortedArray {
 
     }
 }
+====================================================================
+another approch
+class Solution {
+  public static void main(String[] args) {
+    int [] num1={2,1,4};
+    int [] num2={5,3,6};
+
+
+   
+    System.out.println(med(num1, num2));
+  }
+
+  public static int med(int[] num1, int[] num2){
+    int n1= num1.length;
+    int n2= num2.length;
+    int i=0,j=0,k=0;
+    int[] mrgdArr=new int[n1+n2];
+    int mid=0;
+
+     while(i<n1 && j<n2){
+            if (num1[i]<num2[j]) {
+                mrgdArr[k++] = num1[i++];
+            }else{
+                mrgdArr[k++] = num2[j++];
+            }
+        }
+
+    while(i<n1){
+      mrgdArr[k++]=num1[i++];
+    }
+
+    while(j<n2){
+      mrgdArr[k++]=num2[j++];
+    }
+
+    Arrays.sort(mrgdArr);
+   // System.out.println(mrgdArr+"mearged");
+    int tlnt=mrgdArr.length;
+    if(tlnt%2==0){
+      mid=mrgdArr[tlnt/2];
+    }else{
+      mid = mrgdArr[(tlnt-1)/2];
+    }
+    return mid;
+  } 
+}
+
+
