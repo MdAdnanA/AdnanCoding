@@ -1,0 +1,52 @@
+/*
+ * Click `Run` to execute the snippet below!
+ */
+
+import java.io.*;
+import java.util.*;
+
+/*
+ * To execute Java, please define "static void main" on a class
+ * named Solution.
+ *
+ * If you need more classes, simply define them inline.
+ */
+
+class Solution {
+
+    public static void main(String[] args) {
+        String input = "abcd{efgh}ijkl{mno}pq";
+        String output = reverseInsideBraces(input);
+        System.out.println("Output: " + output);
+    }
+
+    public static String reverseInsideBraces(String input) {
+        StringBuilder result = new StringBuilder();
+
+        int i = 0;
+        while (i < input.length()) {
+            if (input.charAt(i) == '{') {
+                int start = i + 1;
+                int end = input.indexOf('}', start);
+                //System.out.println(end+":end index");
+                if (end != -1) {
+                    String toReverse = input.substring(start, end);
+                    result.append('{')
+                          .append(new StringBuilder(toReverse).reverse())
+                          .append('}');
+                    i = end + 1;
+                } else {
+                    // No closing brace — just append the rest
+                    result.append(input.substring(i));
+                    break;
+                }
+            } else {
+                result.append(input.charAt(i));
+                i++;
+            }
+        }
+
+        return result.toString();
+    }
+}
+ -
