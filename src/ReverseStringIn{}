@@ -1,0 +1,32 @@
+public class ReverseInBraces {
+
+    public static String reverseInBraces(String input) {
+        StringBuilder sb = new StringBuilder(input);
+        int i = 0;
+
+        while (i < sb.length()) {
+            if (sb.charAt(i) == '{') {
+                int start = i + 1;
+                int end = sb.indexOf("}", start);
+                if (end == -1) break;
+
+                for (int left = start, right = end - 1; left < right; left++, right--) {
+                    char temp = sb.charAt(left);
+                    sb.setCharAt(left, sb.charAt(right));
+                    sb.setCharAt(right, temp);
+                }
+
+                i = end + 1;
+            } else {
+                i++;
+            }
+        }
+
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        String input = "abcd{efgh}ijk{lmnop}qrs";
+        System.out.println(reverseInBraces(input)); // abcd{hgfe}ijk{ponml}qrs
+    }
+}
